@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dorkbox</groupId>
+    <artifactId>Notify</artifactId>
+    <version>2.17</version>
+    <packaging>jar</packaging>
+
+    <name>Notify</name>
+    <description>Cross platform, growl/toast/notification popups for Java 6+</description>
+    <url>https://github.com/dorkbox/Notify</url>
+
+
+    <issueManagement>
+        <url>https://github.com/dorkbox/Notify/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+
+    <licenses>
+        <license>
+            <comments>Dorkbox Notify</comments>
+            <name>Apache 2.0 License</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+        </license>
+        <license>
+            <comments>ControlsFX</comments>
+            <name>BSD 3-clause License</name>
+            <url>http://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+        <license>
+            <comments>Dorkbox ObjectPool</comments>
+            <name>Apache 2.0 License</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+        </license>
+        <license>
+            <comments>Dorkbox TweenEngine</comments>
+            <name>Apache 2.0 License</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+        </license>
+        <license>
+            <comments>Dorkbox Utils</comments>
+            <name>Apache 2.0 License</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+        </license>
+        <license>
+            <comments>Java Universal Tween Engine</comments>
+            <name>Apache 2.0 License</name>
+            <url>http://opensource.org/licenses/Apache-2.0</url>
+        </license>
+        <license>
+            <comments>Robert Penner's Easing Functions</comments>
+            <name>BSD 3-clause License</name>
+            <url>http://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+    </licenses>
+
+
+    <developers>
+        <developer>
+            <name>Dorkbox</name>
+            <email>sonatype@dorkbox.com</email>
+            <organization>Dorkbox</organization>
+            <organizationUrl>https://github.com/dorkbox</organizationUrl>
+        </developer>
+    </developers>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>6</maven.compiler.source>
+        <maven.compiler.target>6</maven.compiler.target>
+    </properties>
+
+
+    <scm>
+        <connection>scm:git:git@github.com:dorkbox/Notify.git</connection>
+        <developerConnection>scm:git:git@github.com:dorkbox/Notify.git</developerConnection>
+        <url>git@github.com:dorkbox/Notify.git</url>
+    </scm>
+
+    <build>
+      <sourceDirectory>src</sourceDirectory>
+      <!--  tests in test dir are just for humans
+      <testSourceDirectory>test</testSourceDirectory>
+       -->
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dorkbox</groupId>
+            <artifactId>Notify-Dorkbox-Util</artifactId>
+            <version>2.16</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.dorkbox</groupId>
+            <artifactId>TweenEngine</artifactId>
+            <version>7.13</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
