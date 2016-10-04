@@ -358,7 +358,9 @@ class Notify {
     }
 
     void onClick() {
-        onAction.handle(this);
+        if(onAction != null) {
+            onAction.handle(this);
+        }
     }
 
     void onClose() {

@@ -290,7 +290,7 @@ class NotifyPopup extends JFrame {
         if (cachedImage == null) {
             cachedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 
-            Graphics g2 = cachedImage.createGraphics();
+            Graphics2D g2 = cachedImage.createGraphics();
             try {
                 g2.setColor(panel_BG);
                 g2.fillRect(0, 0, WIDTH, HEIGHT);
@@ -350,7 +350,10 @@ class NotifyPopup extends JFrame {
                 g2.translate(posX, posY);
                 mainTextLabel.paint(g2);
                 g2.translate(-posX, -posY);
-            } finally {
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+            finally {
                 g2.dispose();
             }
 
@@ -358,7 +361,8 @@ class NotifyPopup extends JFrame {
         }
         else {
             // use our cached image, so we don't have to re-render text
-            g.drawImage(cachedImage, getX(), getY(), null);
+//            g.drawImage(cachedImage, getX(), getY(), null);  // results in blank first popup on Windows
+            g.drawImage(cachedImage, 0, 0, null);
 
             // the progress bar and close button are the only things that can change, so we always draw them
             Graphics2D g2 = (Graphics2D) g.create();
@@ -384,7 +388,10 @@ class NotifyPopup extends JFrame {
 
                 g2.setColor(progress_FG);
                 g2.fillRect(0, PROGRESS_HEIGHT, progress, 1);
-            } finally {
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+            finally {
                 g2.dispose();
             }
         }
